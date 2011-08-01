@@ -2,7 +2,7 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.xml
   def index
-    @contacts = Contact.all
+    @contacts = Venue.find(params[:venue_id]).contact
     
     respond_to do |format|
       format.html #index.html.erb
@@ -41,11 +41,12 @@ class ContactsController < ApplicationController
   # POST /contacts.xml
   def create
     @contact = Contact.new(params[:contact])
+    @contact.venue_id = params[:venue_id]
     
     respond_to do |format|
       
       if @contact.save
-        format.html { redirect_to(contacts_path, :notice => 'Contact was successfully created.') }
+        format.html { redirect_to(venue_contacts_path, :notice => 'Contact was successfully created.') }
       else
         format.html {render :action => "new" }
       end 
@@ -57,9 +58,10 @@ class ContactsController < ApplicationController
   def update
     @contact = Contact.find(params[:contact])
     
+        
     respond_to do |format|
       if @contact.update_attributes(params[:contact])
-        format.html { redirect_to(@contact, :notice => "Contact was successfully updated.")}
+        format.html { redirect_to(venue_contacts_path, :notice => "Contact was successfully updated.")}
         format.xml { head :ok }
        else
          format.html { render :action => "edit"}
