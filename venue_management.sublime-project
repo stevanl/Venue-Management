@@ -7,6 +7,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/Users/slitobac/Documents/Development/venue_management/config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 1974,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -31,6 +39,10 @@
 	},
 	"file_history":
 	[
+		"/Users/slitobac/Documents/Development/venue_management/config/database.yml",
+		"/Users/slitobac/Documents/Development/venue_management/.gitignore",
+		"/Users/slitobac/Documents/Development/venue_management/Gemfile",
+		"/Users/slitobac/Documents/Development/venue_management/public/index.html",
 		"/Users/slitobac/Documents/Development/mtm_app/.gitignore",
 		"/Users/slitobac/Library/Application Support/Sublime Text 2/Packages/User/Global.sublime-settings",
 		"/Users/slitobac/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
@@ -90,6 +102,34 @@
 		{
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/Users/slitobac/Documents/Development/venue_management/config/routes.rb",
+					"settings":
+					{
+						"buffer_size": 1974,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								65,
+								65
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -134,6 +174,26 @@
 		"height": 0,
 		"selected_items":
 		[
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"inde",
+				"public/index.html"
+			],
+			[
+				"gemfil",
+				"Gemfile"
+			],
+			[
+				"giti",
+				".gitignore"
+			],
+			[
+				"data",
+				"config/database.yml"
+			]
 		],
 		"width": 0
 	},

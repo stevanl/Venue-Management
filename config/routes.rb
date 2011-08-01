@@ -1,4 +1,5 @@
 VenueManagement::Application.routes.draw do
+  root :to => "venues#index"
 
   resources :contacts, :only => [:destroy, :update]
   resources :venues do

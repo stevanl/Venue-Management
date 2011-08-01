@@ -1,0 +1,9 @@
+javascripts:
+  workspace:
+    - public/javascripts/jquery.textPlaceholder.js
+    - public/javascripts/jquery.validate.min.js
+
+stylesheets:
+  common:
+    - public/stylesheets/screen.css
+    - public/stylesheets/venues.css
