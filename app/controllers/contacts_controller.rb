@@ -56,11 +56,11 @@ class ContactsController < ApplicationController
   # POST /contacts
   # POST /contacts.xml
   def update
-    @contact = Contact.find(params[:contact])
-    
+    @contact = Contact.find(params[:id])
         
     respond_to do |format|
       if @contact.update_attributes(params[:contact])
+        #format.html { redirect_to(venue_contacts_path, :notice => "Contact was successfully updated.")}
         format.html { redirect_to(venue_contacts_path, :notice => "Contact was successfully updated.")}
         format.xml { head :ok }
        else

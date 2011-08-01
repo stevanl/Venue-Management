@@ -1,8 +1,9 @@
 login: &login
   adapter: mysql
   username: root
-  password: 
+  password: root
   host: localhost
+  port: 3307
 
 development:
   <<: *login
