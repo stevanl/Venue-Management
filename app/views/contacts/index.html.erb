@@ -1,4 +1,4 @@
-<h1>Contacts</h1>
+<h1>Contacts: <%= link_to @venue.name, venue_path(@venue) %></h1>
 <%= link_to 'New Contact', new_venue_contact_path() %>
 <table>
 	<tr>
@@ -11,7 +11,7 @@
 		<tr>
 			<td><%= link_to contact.contact_name, [@venue, contact] %></td>
 			<td><%= contact.contact_role %></td>
-			<td><%= link_to 'Delete', [@venue, contact], :method => :delete, :confirm => "you sure?" %></td>
+			<td><%= button_to 'Delete', [@venue, contact], :method => :delete, :confirm => "you sure?" %></td>
 			
 		</tr>
 	<%- end%>

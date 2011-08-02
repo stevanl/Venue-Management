@@ -1,4 +1,4 @@
-<h1><%= @venue.name %>: Meeting rooms</h1>
+<h1>Meeting rooms: <%= link_to @venue.name, venue_path(@venue) %></h1>
 <table>
 	<tr>
 		<th colspan="5" style="text-align:right"><%= link_to 'Add New Meeting Room', new_venue_meeting_room_path %></th>
