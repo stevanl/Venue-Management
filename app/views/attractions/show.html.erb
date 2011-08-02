@@ -1,0 +1,11 @@
+<h1><%= @attraction.attraction %></h1>
+<p id="notice"><%= notice %></p>
+
+<table>
+  <tr>
+    <th width="130">Venue Attraction:</th>
+    <td><%= @attraction.attraction %> <%= link_to '(edit)', edit_venue_attraction_path(@venue, @attraction) %></td>
+  </tr>
+  <tr>
+  <td><%= link_to 'Delete', [@venue, @attraction], :method => :destroy, :confirm => "sure?" %></td></tr>
+</table>

@@ -66,6 +66,10 @@
     <th>Nearby Facilities:</th>
     <td><%= link_to @venue.nearby_facility.size, venue_nearby_facilities_path(@venue) %></td>
   </tr>
+  <tr>
+    <th>Attractions:</th>
+    <td><%= link_to @venue.attraction.size, venue_attractions_path(@venue) %></td>
+  </tr>
 </table>
 
 <%= link_to 'Edit', edit_venue_path(@venue) %> |
