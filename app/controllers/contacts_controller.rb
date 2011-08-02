@@ -3,7 +3,7 @@ class ContactsController < ApplicationController
   # GET /contacts.xml
   def index
     @venue = Venue.find(params[:venue_id])
-    @contacts = Venue.find(params[:venue_id]).contact
+    @contacts = @venue.contact
     
     respond_to do |format|
       format.html #index.html.erb
@@ -15,7 +15,7 @@ class ContactsController < ApplicationController
   # GET /contacts/1.xml
   def show
     @venue = Venue.find(params[:venue_id])
-    @contact = Contact.find(params[:id])
+    @contact = @venue.contact.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -27,7 +27,8 @@ class ContactsController < ApplicationController
   # GET /contacts/new.xml
   def new
     @venue = Venue.find(params[:venue_id])
-    @contact = Contact.new
+    @contact = @venue.contact.new
+
     respond_to do |format|
       format.html #new.html.erb
     end
@@ -36,18 +37,16 @@ class ContactsController < ApplicationController
    # GET /contacts/1/edit
   def edit
     @venue = Venue.find(params[:venue_id])
-    @contact = Contact.find(params[:id])
+    @contact = @venue.contact.find(params[:id])
   end
   
   # POST /contacts
   # POST /contacts.xml
   def create
     @venue = Venue.find(params[:venue_id])
-    @contact = Contact.new(params[:contact])
-    @contact.venue_id = params[:venue_id]
+    @contact = @venue.contact.new(params[:contact])
     
     respond_to do |format|
-      
       if @contact.save
         format.html { redirect_to(venue_contacts_path, :notice => 'Contact was successfully created.') }
       else
@@ -60,7 +59,7 @@ class ContactsController < ApplicationController
   # POST /contacts.xml
   def update
     @venue = Venue.find(params[:venue_id])
-    @contact = Contact.find(params[:id])
+    @contact = @venue.contact.find(params[:id])
         
     respond_to do |format|
       if @contact.update_attributes(params[:contact])
@@ -78,7 +77,7 @@ class ContactsController < ApplicationController
   #DELETE /contacts/1.xml
   def destroy
     @venue = Venue.find(params[:venue_id])
-    @contact = Contact.find(params[:id])
+    @contact = @venue.contact.find(params[:id])
     @contact.destroy
     
     respond_to do |format|

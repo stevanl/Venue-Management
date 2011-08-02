@@ -6,4 +6,6 @@
     <th width="130">Contact name:</th>
     <td><%= @contact.contact_name %> <%= link_to '(edit)', edit_venue_contact_path(@venue, @contact) %></td>
   </tr>
+  <tr>
+  <td><%= link_to 'Delete', [@venue, @contact], :method => :destroy, :confirm => "sure?" %></td></tr>
 </table>
