@@ -1,0 +1,18 @@
+<%= form_for [@venue, @style] do |f| %>
+	
+	<% if @style.errors.any? %>
+		<div id="error_explanation">
+			
+			<h2>Error occured</h2>
+		</div>
+	<% end %>
+	
+<div class="field">
+	<%= f.label :style%>
+	<%= f.text_field :style %>
+</div>
+
+<div class="actions">
+	<%= f.submit %>
+</div>
+<% end %>

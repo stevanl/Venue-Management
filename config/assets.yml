@@ -1,5 +1,6 @@
 javascripts:
   workspace:
+    - public/javascripts/rails.js
     - public/javascripts/jquery.textPlaceholder.js
     - public/javascripts/jquery.validate.min.js
 

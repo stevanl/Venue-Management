@@ -1,0 +1,15 @@
+<h1>Venue Style: <%= @venue.name %> </h1>
+<%= link_to 'Add Venue Style', new_venue_style_path() %>
+<table>
+	<tr>
+		<th>Style</th>
+		<th>Delete</th>
+		
+	</tr>
+	<%- for style in @styles %>
+		<tr>
+			<td><%= link_to style.style, [@venue, style] %></td>
+			<td><%= button_to 'Delete', [@venue, style], :method => :delete, :confirm => "you sure?" %></td>
+		</tr>
+	<%- end%>
+</table>
