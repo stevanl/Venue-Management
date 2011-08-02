@@ -10,6 +10,7 @@
 	<%- for meeting_room in @meeting_rooms %>
 	<tr>
 		<td><%= link_to meeting_room.room_name, [@venue, meeting_room] %></td>
+		<td><%= button_to 'Delete', [@venue, meeting_room], :method => :delete, :confirm => "you sure?" %></td>
 	</tr>
 	<%- end %>
 </table>
