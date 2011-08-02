@@ -10,52 +10,60 @@
       </ul>
     </div>
   <% end %>
+<p id="notice"><%= notice %></p>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br />
-    <%= f.text_area :address %>
-  </div>
-  <div class="field">
-  	<%= f.label :postcode%>
-  	<%= f.text_field :postcode%>
-  </div>
-  <div class="field">
-  	<%= f.label :telephone%>
-  	<%= f.text_field :telephone%>
-  </div>
-  <div class="field">
-  	<%= f.label :fax%>
-  	<%= f.text_field :fax%>
-  </div>
-  <div class="field">
-  	<%= f.label :website%>
-  	<%= f.text_field :website%>
-  </div>
-  <div class="field">
-  	<%= f.label :delegate_rates%>
-  	<%= f.text_field :delegate_rates%>
-  </div>
-  <div class="field">
-  	<%= f.label :room_hire_rates%>
-  	<%= f.text_field :room_hire_rates%>
-  </div>
-  <div class="field">
-  	<%= f.label :meeting_capacity%>
-  	<%= f.text_field :meeting_capacity%>
-  </div>
-  <div class="field">
-  	<%= f.label :catering_capacity%>
-  	<%= f.text_field :catering_capacity%>
-  </div>
-  <div class="field">
-  	<%= f.label :no_bedrooms%>
-  	<%= f.text_field :no_bedrooms%>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<table>
+  <tr>
+    <th width="130">Venue Name:</th>
+    <td><%= f.text_field :name, :size => 50 %></td>
+  </tr>
+  <tr>
+    <th>Address:</th>
+    <td><%= f.text_area :address  %></td>
+  </tr>
+  <tr>
+    <th>Postcode:</th>
+    <td><%= f.text_field :postcode, :size => 10 %></td>
+  </tr>
+  <tr>
+    <th>Telephone:</th>
+    <td><%= f.text_field :telephone, :size => 30 %></td>
+  </tr>
+  <tr>
+    <th>Fax:</th>
+    <td><%= f.text_field :fax, :size => 30 %></td>
+  </tr>
+  <tr>
+    <th>Website:</th>
+    <td><%= f.text_field :website, :size => 30 %></td>
+  </tr>
+  <tr>
+    <th>Delegate rates:</th>
+    <td><%= f.text_field :delegate_rates, :size => 5 %></td>
+  </tr>
+  <tr>
+    <th>Room hire rates:</th>
+    <td><%= f.text_field :room_hire_rates, :size => 5 %></td>
+  </tr>
+  <tr>
+    <th>Meeting capacity:</th>
+    <td><%= f.text_field :meeting_capacity, :size => 5 %></td>
+  </tr>
+  <tr>
+    <th>Catering capacity:</th>
+    <td><%= f.text_field :catering_capacity, :size => 5 %></td>
+  </tr>
+  <tr>
+    <th>No bedrooms:</th>
+    <td><%= f.text_field :no_bedrooms, :size => 5 %></td>
+  </tr>
+  <tr>
+    <th>Disabled Access:</th>
+    <td><%= f.text_field :disabled_access, :size => 5 %></td>
+  </tr>
+  <tr>
+    <th>&nbsp;</th>
+    <th><%= f.submit %> </th>
+  </tr>
+</table>
 <% end %>

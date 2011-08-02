@@ -1,4 +1,4 @@
-<%= form_for [@venue, @contact], :url => contact_path(@contact) do |f| %>
+<%= form_for [@venue, @contact] do |f| %>
 	
 	<% if @contact.errors.any? %>
 		<div id="error_explanation">

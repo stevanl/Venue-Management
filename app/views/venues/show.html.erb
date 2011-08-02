@@ -1,64 +1,60 @@
+<h1><%= @venue.name %></h1>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @venue.name %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @venue.address %>
-</p>
-
-<p>
-  <b>Postcode:</b>
-  <%= @venue.postcode %>
-</p>
-
-<p>
-  <b>Telephone:</b>
-  <%= @venue.telephone %>
-</p>
-
-<p>
-  <b>Fax:</b>
-  <%= @venue.fax %>
-</p>
-
-<p>
-  <b>Website:</b>
-  <%= @venue.website %>
-</p>
-
-<p>
-  <b>Delegate rates:</b>
-  <%= @venue.delegate_rates %>
-</p>
-
-<p>
-  <b>Room hire rates:</b>
-  <%= @venue.room_hire_rates %>
-</p>
-
-<p>
-  <b>Meeting capacity:</b>
-  <%= @venue.meeting_capacity %>
-</p>
-
-<p>
-  <b>Catering capacity:</b>
-  <%= @venue.catering_capacity %>
-</p>
-
-<p>
-  <b>No bedrooms:</b>
-  <%= @venue.no_bedrooms %>
-</p>
-
-
-<p><% for room in Venue.find(@venue.id).meeting_room do %></p>
-<%= link_to room.name, meeting_room_url(room) %>
-<% end %>
+<table>
+  <tr>
+    <th width="130">Venue:</th>
+    <td><%= @venue.name %> <%= link_to '(edit)', edit_venue_path(@venue) %></td>
+  </tr>
+  <tr>
+    <th>Address:</th>
+    <td><%= @venue.address %></td>
+  </tr>
+  <tr>
+    <th>Postcode:</th>
+    <td><%= @venue.postcode %></td>
+  </tr>
+  <tr>
+    <th>Telephone:</th>
+    <td><%= @venue.telephone %></td>
+  </tr>
+  <tr>
+    <th>Fax:</th>
+    <td><%= @venue.fax %></td>
+  </tr>
+  <tr>
+    <th>Website:</th>
+    <td><%= @venue.website %></td>
+  </tr>
+  <tr>
+    <th>Delegate rates:</th>
+    <td><%= @venue.delegate_rates %></td>
+  </tr>
+  <tr>
+    <th>Room hire rates:</th>
+    <td><%= @venue.room_hire_rates %></td>
+  </tr>
+  <tr>
+    <th>Meeting capacity:</th>
+    <td><%= @venue.meeting_capacity %></td>
+  </tr>
+  <tr>
+    <th>Catering capacity:</th>
+    <td><%= @venue.catering_capacity %></td>
+  </tr>
+  <tr>
+    <th>No bedrooms:</th>
+    <td><%= @venue.no_bedrooms %></td>
+  </tr>
+  <tr>
+    <th>Disabled Access:</th>
+    <td><%= @venue.disabled_access %></td>
+  </tr>
+  <tr>
+    <th>Contacts:</th>
+    <td><%= link_to @venue.contact.size, venue_contacts_path(@venue) %></td>
+  </tr>
+</table>
 
 <%= link_to 'Edit', edit_venue_path(@venue) %> |
 <%= link_to 'Back', venues_path %>

@@ -1,0 +1,9 @@
+<h1><%= @contact.contact_name %></h1>
+<p id="notice"><%= notice %></p>
+
+<table>
+  <tr>
+    <th width="130">Contact name:</th>
+    <td><%= @contact.contact_name %> <%= link_to '(edit)', edit_venue_contact_path(@venue, @contact) %></td>
+  </tr>
+</table>

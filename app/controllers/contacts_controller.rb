@@ -2,6 +2,7 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.xml
   def index
+    @venue = Venue.find(params[:venue_id])
     @contacts = Venue.find(params[:venue_id]).contact
     
     respond_to do |format|
@@ -13,6 +14,7 @@ class ContactsController < ApplicationController
   # GET /contacts/1
   # GET /contacts/1.xml
   def show
+    @venue = Venue.find(params[:venue_id])
     @contact = Contact.find(params[:id])
 
     respond_to do |format|
@@ -24,22 +26,23 @@ class ContactsController < ApplicationController
   # GET /contacts/new
   # GET /contacts/new.xml
   def new
+    @venue = Venue.find(params[:venue_id])
     @contact = Contact.new
-    
     respond_to do |format|
       format.html #new.html.erb
-      format.xml { render :xml => @contact }
     end
   end
   
    # GET /contacts/1/edit
   def edit
+    @venue = Venue.find(params[:venue_id])
     @contact = Contact.find(params[:id])
   end
   
   # POST /contacts
   # POST /contacts.xml
   def create
+    @venue = Venue.find(params[:venue_id])
     @contact = Contact.new(params[:contact])
     @contact.venue_id = params[:venue_id]
     
@@ -56,6 +59,7 @@ class ContactsController < ApplicationController
   # POST /contacts
   # POST /contacts.xml
   def update
+    @venue = Venue.find(params[:venue_id])
     @contact = Contact.find(params[:id])
         
     respond_to do |format|
@@ -73,11 +77,12 @@ class ContactsController < ApplicationController
   #DELETE /contacts/1
   #DELETE /contacts/1.xml
   def destroy
+    @venue = Venue.find(params[:venue_id])
     @contact = Contact.find(params[:id])
     @contact.destroy
     
     respond_to do |format|
-      format.html { redirect_to(contacts_url)}
+      format.html { redirect_to(venue_contacts_url)}
       format.xml { head :ok } 
     end
   end

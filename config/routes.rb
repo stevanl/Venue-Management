@@ -1,9 +1,8 @@
 VenueManagement::Application.routes.draw do
   root :to => "venues#index"
-
-  resources :contacts, :only => [:destroy, :update]
+ 
   resources :venues do
-    resources :contacts, :only => [:create, :edit, :index, :new]
+    resources :contacts, :only => [:create, :edit, :index, :new, :update, :destroy, :show]
   end
   # The priority is based upon order of creation:
   # first created -> highest priority.
