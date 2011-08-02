@@ -54,6 +54,14 @@
     <th>Contacts:</th>
     <td><%= link_to @venue.contact.size, venue_contacts_path(@venue) %></td>
   </tr>
+  <tr>
+    <th>Meeting Rooms:</th>
+    <td><%= link_to @venue.meeting_room.size, venue_meeting_room_path(@venue) %></td>
+  </tr>
+  <tr>
+    <th>Styles:</th>
+    <td><%= link_to @venue.style.size, venue_styles_path(@venue) %></td>
+  </tr>
 </table>
 
 <%= link_to 'Edit', edit_venue_path(@venue) %> |

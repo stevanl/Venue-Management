@@ -4,6 +4,7 @@ VenueManagement::Application.routes.draw do
   resources :venues do
     resources :contacts, :only => [:create, :edit, :index, :new, :update, :destroy, :show]
     resources :styles, :only => [:create, :edit, :index, :new, :update, :destroy, :show]
+    resources :meeting_rooms, :only => [:create, :edit, :index, :new, :update, :destroy, :show]
   end
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,130 @@
+<h1><%= @venue.name %>: <%= @meeting_room.room_name %></h1>
+<p id="notice"><%= notice %></p>
+
+<table>
+  <tr>
+    <th width="130">Meeting Room:</th>
+  </tr>
+  <tr>
+  	<th>Room Name:</th>
+    <td><%= @meeting_room.room_name %> <%= link_to '(edit)', edit_venue_meeting_room_path(@venue, @meeting_room) %></td>
+  </tr>
+  <tr>
+  	<th>Suite:</th>
+    <td><%= @meeting_room.suite %></td>
+  </tr>
+  <tr>
+  	<th>Floor:</th>
+    <td><%= @meeting_room.floor %></td>
+  </tr>
+  <tr>
+  	<th>Lift:</th>
+    <td><%= @meeting_room.lift %></td>
+  </tr>
+  <tr>
+  	<th>Theatre:</th>
+    <td><%= @meeting_room.theatre %></td>
+  </tr>
+  <tr>
+  	<th>Classroom:</th>
+    <td><%= @meeting_room.classroom %></td>
+  </tr>
+  <tr>
+  	<th>Boardroom:</th>
+    <td><%= @meeting_room.boardroom %></td>
+  </tr>
+  <tr>
+  	<th>U-shape:</th>
+    <td><%= @meeting_room.ushape %></td>
+  </tr>
+  <tr>
+  	<th>Cabaret:</th>
+    <td><%= @meeting_room.cabaret %></td>
+  </tr>
+  <tr>
+  	<th>Lunch / Dinner</th>
+    <td><%= @meeting_room.lunch_dinner %></td>
+  </tr>
+  <tr>
+  	<th>Reception</th>
+    <td><%= @meeting_room.reception %></td>
+  </tr>
+  <tr>
+  	<th>Length</th>
+    <td><%= @meeting_room.length %></td>
+  </tr>
+  <tr>
+  	<th>Width</th>
+    <td><%= @meeting_room.width %></td>
+  </tr>
+  <tr>
+  	<th>Area</th>
+    <td><%= @meeting_room.area %></td>
+  </tr>
+  <tr>
+  	<th>Max Height</th>
+    <td><%= @meeting_room.max_height %></td>
+  </tr>
+  <tr>
+  	<th>Min Height</th>
+    <td><%= @meeting_room.min_height %></td>
+  </tr>
+  <tr>
+  	<th>Door Height</th>
+    <td><%= @meeting_room.door_height %></td>
+  </tr>
+  <tr>
+  	<th>Door Width</th>
+    <td><%= @meeting_room.door_width %></td>
+  </tr>
+  <tr>
+  	<th>Tungsten</th>
+    <td><%= @meeting_room.tungsten %></td>
+  </tr>
+  <tr>
+  	<th>Fluorescent</th>
+    <td><%= @meeting_room.fluorescent %></td>
+  </tr>
+  <tr>
+  	<th>Halogen</th>
+    <td><%= @meeting_room.halogen %></td>
+  </tr>
+  <tr>
+  	<th>Dimmers</th>
+    <td><%= @meeting_room.dimmers %></td>
+  </tr>
+  <tr>
+  	<th>Controls</th>
+    <td><%= @meeting_room.controls %></td>
+  </tr>
+  <tr>
+  	<th>Blackout</th>
+    <td><%= @meeting_room.blackout %></td>
+  </tr>
+  <tr>
+  	<th>Windows</th>
+    <td><%= @meeting_room.windows %></td>
+  </tr>
+  <tr>
+  	<th>Sound System:</th>
+    <td><%= @meeting_room.sound_system %></td>
+  </tr>
+  <tr>
+  	<th>Air Conditioning</th>
+    <td><%= @meeting_room.air_conditioning %></td>
+  </tr>
+  <tr>
+  	<th>Phase</th>
+    <td><%= @meeting_room.phase %></td>
+  </tr>
+  <tr>
+  	<th>Sockets</th>
+    <td><%= @meeting_room.sockets %></td>
+  </tr>
+  <tr>
+  	<th>Telephone Points</th>
+    <td><%= @meeting_room.telephone_points %></td>
+  </tr>
+  <tr>
+  <td><%= link_to 'Delete', [@venue, @meeting_room], :method => :destroy, :confirm => "sure?" %></td></tr>
+</table>

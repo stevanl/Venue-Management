@@ -1,4 +1,4 @@
-<h1>Venue Style: <%= @venue.name %> </h1>
+<h1>Venue Style: <%= link_to @venue.name, venue_path(@venue) %> </h1>
 <%= link_to 'Add Venue Style', new_venue_style_path() %>
 <table>
 	<tr>
