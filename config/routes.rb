@@ -2,12 +2,15 @@ VenueManagement::Application.routes.draw do
   root :to => "venues#index"
  
   resources :venues do
-    resources :contacts, :only => [:create, :edit, :index, :new, :update, :destroy, :show]
-    resources :styles, :only => [:create, :edit, :index, :new, :update, :destroy, :show]
-    resources :meeting_rooms, :only => [:create, :edit, :index, :new, :update, :destroy, :show]
-    resources :nearby_facilities, :only => [:create, :edit, :index, :new, :update, :destroy, :show]
-    resources :attractions, :only => [:create, :edit, :index, :new, :update, :destroy, :show]
+    resources :contacts
+    resources :styles
+    resources :meeting_rooms
+    resources :nearby_facilities
+    resources :attractions
   end
+
+  match 'api/search_venues'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
