@@ -1,3 +1,4 @@
+<div class="span-18">
 <h1>Listing all Venues</h1>
 <table>
 	<tr>
@@ -32,4 +33,20 @@
 	</tr>
 	<%- end %>
 </table>
+
 <%= paginate @venues %>
+</div>
+<div class="span-4 box last">
+<h2>Search</h2>
+<%= form_for @search do |f| %>
+	<%= f.label :name_contains %>
+	<%= f.text_field :name_contains, :size => 25 %><br />
+	<%= f.label :postcode_contains %>
+	<%= f.text_field :postcode_contains, :size => 25 %><br />
+	<%= f.label :room_hire_rates_lt %>
+	<%= f.number_field :room_hire_rates_lt, :size => 25 %><br />
+	<%= f.label :meeting_capacity_gt %>
+	<%= f.number_field :meeting_capacity_gt, :size => 25 %><br />
+	<%= f.submit "Search" %>
+<% end %>
+</div>

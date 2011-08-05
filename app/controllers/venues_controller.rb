@@ -2,7 +2,8 @@ class VenuesController < ApplicationController
   # GET /venues
   # GET /venues.xml
   def index
-    @venues = Venue.page(params[:page]).per(10)
+    @search = Venue.search(params[:search])
+    @venues = @search.page(params[:page]).per(10)
 
     respond_to do |format|
       format.html # index.html.erb
