@@ -1,3 +1,38 @@
+<script type="text/javascript"> 
+
+var map = null;
+var geocoder = null;
+
+function showAddress(address) {
+  if (geocoder) {
+    geocoder.getLatLng(
+      address,
+      function(point) {
+        if (!point) {
+          alert(address + " not found");
+        } else {
+          map.setCenter(point, 13);
+          var marker = new GMarker(point);
+          map.addOverlay(marker);
+
+          // As this is user-generated content, we display it as
+          // text rather than HTML to reduce XSS vulnerabilities.
+          marker.openInfoWindow(document.createTextNode(address));
+        }
+      }
+    );
+  }
+}
+
+function initialize() {
+  if (GBrowserIsCompatible()) {
+    map = new GMap2(document.getElementById("map_canvas"));
+    geocoder = new GClientGeocoder();
+    showAddress("<%= @venue.address %>")
+  }
+}
+
+</script> 
 <h1><%= link_to 'Venues', venues_path() %>: <%= @venue.name %></h1>
 <p id="notice"><%= notice %></p>
 
@@ -62,15 +97,7 @@
     <th>Styles:</th>
     <td><%= link_to @venue.style.size, venue_styles_path(@venue) %></td>
   </tr>
-  <tr>
-    <th>Nearby Facilities:</th>
-    <td><%= link_to @venue.nearby_facility.size, venue_nearby_facilities_path(@venue) %></td>
-  </tr>
-  <tr>
-    <th>Attractions:</th>
-    <td><%= link_to @venue.attraction.size, venue_attractions_path(@venue) %></td>
-  </tr>
 </table>
-
+<div id="map_canvas" style="width: 950px; height: 300px"></div>
 <%= link_to 'Edit', edit_venue_path(@venue) %> |
 <%= link_to 'Back', venues_path %>

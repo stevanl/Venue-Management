@@ -5,8 +5,6 @@ VenueManagement::Application.routes.draw do
     resources :contacts
     resources :styles
     resources :meeting_rooms
-    resources :nearby_facilities
-    resources :attractions
   end
 
   match 'api/search_venues'

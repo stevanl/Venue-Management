@@ -8,12 +8,59 @@
 	"buffers":
 	[
 		{
-			"contents": "<table>\n	<tr>\n		<th>Name</th>\n		<th>Postcode</th>\n		<th>Styles</th>\n		<th>Meeting Rooms</th>\n		<th>Action</th>\n	</tr>\n	<%- for venue in @venues %>\n	<tr>\n		<td><%= link_to venue.name, venue_path(venue) %></td>\n		<td><%= venue.postcode %></td>\n		<td>\n		<ul>\n			<%- for style in venue.style -%>\n			<li<%= style.style %>\n		<%- end -%>\n		</td>\n		<td><%= venue.meeting_room %></td>\n		<td><%= link_to 'Edit', edit_venue_path(venue) %></td>\n	</tr>\n	<%- end %>\n</table>\n\n<%= link_to 'New Venue', new_venue_path %>\n",
+			"file": "/Users/slitobac/Documents/Development/venue_management/app/views/venues/show.html.erb",
+			"settings":
+			{
+				"buffer_size": 1833,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/slitobac/Documents/Development/venue_management/app/controllers/venues_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1986,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/slitobac/Documents/Development/venue_management/app/controllers/api_controller.rb",
+			"settings":
+			{
+				"buffer_size": 248,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/slitobac/Documents/Development/venue_management/app/views/api/search_venues.builder",
+			"settings":
+			{
+				"buffer_size": 120,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "/Users/slitobac/Documents/Development/venue_management/app/views/venues/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 505,
+				"buffer_size": 1247,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Users/slitobac/Documents/Development/venue_management/config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 2023,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/slitobac/Documents/Development/venue_management/config/database.yml",
+			"settings":
+			{
+				"buffer_size": 266,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -32,7 +79,7 @@
 	},
 	"console":
 	{
-		"height": 0
+		"height": 115
 	},
 	"distraction_free":
 	{
@@ -44,23 +91,53 @@
 	},
 	"file_history":
 	[
+		"/Users/slitobac/Documents/Development/venue_management/Gemfile",
+		"/Users/slitobac/Documents/Development/venue_management/app/controllers/attractions_controller.rb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/attractions/show.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/attractions/new.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/attractions/index.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/attractions/edit.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/attractions/_form.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/contacts/show.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/contacts/index.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/venues/index.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/nearby_facilities/new.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/nearby_facilities/show.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/styles/index.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/venues/show.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/meeting_rooms/_form.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/controllers/meeting_rooms_controller.rb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/meeting_rooms/show.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/meeting_rooms/index.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/nearby_facilities/_form.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/nearby_facilities/edit.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/nearby_facilities/index.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/controllers/nearby_facilities_controller.rb",
+		"/Users/slitobac/Documents/Development/venue_management/config/routes.rb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/meeting_rooms/new.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/meeting_rooms/edit.html.erb",
 		"/Users/slitobac/Documents/Development/venue_management/config/assets.yml",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/layouts/application.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/controllers/contacts_controller.rb",
+		"/Users/slitobac/Documents/Development/venue_management/app/controllers/styles_controller.rb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/contacts/_form.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/styles/_form.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/styles/new.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/styles/show.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/styles/edit.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/venues/edit.html.erb",
+		"/Users/slitobac/Documents/Development/venue_management/app/views/venues/_form.html.erb",
+		"/Users/slitobac/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/slitobac/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
 		"/Users/slitobac/Documents/Development/venue_management/app/helpers/application_helper.rb",
 		"/Users/slitobac/Documents/Development/venue_management/config/database.yml",
 		"/Users/slitobac/Documents/Development/venue_management/app/views/venues/new.html.erb",
-		"/Users/slitobac/Documents/Development/venue_management/app/views/venues/show.html.erb",
-		"/Users/slitobac/Documents/Development/venue_management/app/views/venues/edit.html.erb",
-		"/Users/slitobac/Documents/Development/venue_management/app/views/contacts/index.html.erb",
 		"/Users/slitobac/Documents/Development/venue_management/app/views/contacts/edit.html.erb",
-		"/Users/slitobac/Documents/Development/venue_management/app/views/layouts/application.html.erb",
 		"/Users/slitobac/Documents/Development/venue_management/public/stylesheets/print.css",
-		"/Users/slitobac/Documents/Development/venue_management/Gemfile",
-		"/Users/slitobac/Documents/Development/venue_management/config/routes.rb",
 		"/Users/slitobac/Documents/Development/venue_management/.gitignore",
 		"/Users/slitobac/Documents/Development/venue_management/public/index.html",
 		"/Users/slitobac/Documents/Development/mtm_app/.gitignore",
 		"/Users/slitobac/Library/Application Support/Sublime Text 2/Packages/User/Global.sublime-settings",
-		"/Users/slitobac/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
 		"/Users/slitobac/Library/Application Support/Sublime Text 2/Packages/Default/Global.sublime-settings",
 		"/Users/slitobac/Library/Application Support/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
 		"/Users/slitobac/Library/Application Support/Sublime Text 2/Packages/User/Base File.sublime-settings",
@@ -91,6 +168,23 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			", :only => [:create, :edit, :index, :new, :update, :destroy, :show]",
+			"style",
+			"meeting",
+			"meetin",
+			"meeting_room",
+			"meeting_rooms",
+			"style",
+			"styles",
+			"venue",
+			"style",
+			"contact",
+			"contacts",
+			"show",
+			"th>",
+			"th>\n\n\n\n\n\n\nth>",
+			"th>",
+			"th"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -115,28 +209,197 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 6,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/slitobac/Documents/Development/venue_management/app/views/venues/index.html.erb",
+					"file": "/Users/slitobac/Documents/Development/venue_management/app/views/venues/show.html.erb",
 					"settings":
 					{
-						"buffer_size": 505,
+						"buffer_size": 1833,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								298,
-								262
+								1685,
+								1685
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 75,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/slitobac/Documents/Development/venue_management/app/controllers/venues_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1986,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								160,
+								160
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/slitobac/Documents/Development/venue_management/app/controllers/api_controller.rb",
+					"settings":
+					{
+						"buffer_size": 248,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								95,
+								95
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/slitobac/Documents/Development/venue_management/app/views/api/search_venues.builder",
+					"settings":
+					{
+						"buffer_size": 120,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								103,
+								103
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
+							"tab_size": 6,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/slitobac/Documents/Development/venue_management/app/views/venues/index.html.erb",
+					"settings":
+					{
+						"buffer_size": 1247,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								708,
+								708
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/slitobac/Documents/Development/venue_management/config/routes.rb",
+					"settings":
+					{
+						"buffer_size": 2023,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								232,
+								232
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/slitobac/Documents/Development/venue_management/config/database.yml",
+					"settings":
+					{
+						"buffer_size": 266,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								239,
+								266
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
 						"translation.y": 0,
@@ -153,7 +416,7 @@
 	},
 	"input":
 	{
-		"height": 0
+		"height": 27
 	},
 	"layout":
 	{
@@ -180,7 +443,7 @@
 	"menu_visible": true,
 	"replace":
 	{
-		"height": 0
+		"height": 62
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -193,24 +456,56 @@
 				"config/database.yml"
 			],
 			[
-				"gemfil",
+				"gem",
 				"Gemfile"
-			],
-			[
-				"apphe",
-				"app/helpers/application_helper.rb"
-			],
-			[
-				"apphtml",
-				"app/views/layouts/application.html.erb"
 			],
 			[
 				"routes",
 				"config/routes.rb"
 			],
 			[
+				"index",
+				"app/views/venues/index.html.erb"
+			],
+			[
+				"venuecon",
+				"app/controllers/venues_controller.rb"
+			],
+			[
+				"gemfil",
+				"Gemfile"
+			],
+			[
+				"show",
+				"app/views/venues/show.html.erb"
+			],
+			[
+				"meetcon",
+				"app/controllers/meeting_rooms_controller.rb"
+			],
+			[
 				"inde",
-				"public/index.html"
+				"app/views/venues/index.html.erb"
+			],
+			[
+				"assets",
+				"config/assets.yml"
+			],
+			[
+				"contacon",
+				"app/controllers/contacts_controller.rb"
+			],
+			[
+				"apphtml",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"edit",
+				"app/views/venues/edit.html.erb"
+			],
+			[
+				"apphe",
+				"app/helpers/application_helper.rb"
 			],
 			[
 				"giti",

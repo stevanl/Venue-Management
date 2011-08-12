@@ -1,5 +1,6 @@
 <div class="span-18">
 <h1>Listing all Venues</h1>
+<%= paginate @venues %>
 <table>
 	<tr>
 		<th colspan="5" style="text-align:right"><%= link_to 'Add New Venue', new_venue_path %></th>
