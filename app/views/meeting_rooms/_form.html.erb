@@ -19,119 +19,119 @@
   </tr>
   <tr>
     <th>Suit:</th>
-    <td><%= f.text_field :suite, :size => 50 %></td>
+    <td><%= f.text_field :suite, :size => 30 %></td>
   </tr>
   <tr>
     <th>Floor:</th>
-    <td><%= f.text_field :floor, :size => 50 %></td>
+    <td><%= f.text_field :floor, :size => 30 %></td>
   </tr>
   <tr>
     <th>Lift:</th>
-    <td><%= f.text_field :lift, :size => 50 %></td>
+    <td><%= f.select :lift, [['Yes','true'],['No','false']] %></td>
   </tr>
   <tr>
     <th>Theatre:</th>
-    <td><%= f.text_field :theatre, :size => 50 %></td>
+    <td><%= f.text_field :theatre, :size => 10 %></td>
   </tr>
   <tr>
     <th>Classroom:</th>
-    <td><%= f.text_field :classroom, :size => 50 %></td>
+    <td><%= f.text_field :classroom, :size => 10 %></td>
   </tr>
   <tr>
     <th>Boardroom:</th>
-    <td><%= f.text_field :boardroom, :size => 50 %></td>
+    <td><%= f.text_field :boardroom, :size => 10 %></td>
   </tr>
   <tr>
     <th>U-shape:</th>
-    <td><%= f.text_field :ushape, :size => 50 %></td>
+    <td><%= f.text_field :ushape, :size => 10 %></td>
   </tr>
   <tr>
     <th>Cabaret:</th>
-    <td><%= f.text_field :cabaret, :size => 50 %></td>
+    <td><%= f.text_field :cabaret, :size => 10 %></td>
   </tr>
   <tr>
     <th>Lunch / Dinner:</th>
-    <td><%= f.text_field :lunch_dinner, :size => 50 %></td>
+    <td><%= f.text_field :lunch_dinner, :size => 10 %></td>
   </tr>
   <tr>
     <th>Reception:</th>
-    <td><%= f.text_field :reception, :size => 50 %></td>
+    <td><%= f.text_field :reception, :size => 10 %></td>
   </tr>
   <tr>
     <th>Length:</th>
-    <td><%= f.text_field :length, :size => 50 %></td>
+    <td><%= f.text_field :length, :size => 10 %>m</td>
   </tr>
   <tr>
     <th>Width:</th>
-    <td><%= f.text_field :width, :size => 50 %></td>
+    <td><%= f.text_field :width, :size => 10 %>m</td>
   </tr>
   <tr>
     <th>Area:</th>
-    <td><%= f.text_field :area, :size => 50 %></td>
+    <td><%= f.text_field :area, :size => 10 %>m²</td>
   </tr>
   <tr>
     <th>Max Height:</th>
-    <td><%= f.text_field :max_height, :size => 50 %></td>
+    <td><%= f.text_field :max_height, :size => 10 %>m</td>
   </tr>
   <tr>
     <th>Min Height:</th>
-    <td><%= f.text_field :min_height, :size => 50 %></td>
+    <td><%= f.text_field :min_height, :size => 10 %>m</td>
   </tr>
   <tr>
     <th>Door Height:</th>
-    <td><%= f.text_field :door_height, :size => 50 %></td>
+    <td><%= f.text_field :door_height, :size => 10 %>m</td>
   </tr>
   <tr>
     <th>Door Width:</th>
-    <td><%= f.text_field :door_width, :size => 50 %></td>
+    <td><%= f.text_field :door_width, :size => 10 %>m</td>
   </tr>
   <tr>
     <th>Tungsten:</th>
-    <td><%= f.text_field :tungsten, :size => 50 %></td>
+    <td><%= f.select :tungsten, [['Yes','true'],['No','false']] %></td>
   </tr>
   <tr>
     <th>Fluorescent:</th>
-    <td><%= f.text_field :fluorescent, :size => 50 %></td>
+    <td><%= f.select :fluorescent, [['Yes','true'],['No','false']] %></td>
   </tr>
   <tr>
     <th>Halogen:</th>
-    <td><%= f.text_field :halogen, :size => 50 %></td>
+    <td><%= f.select :halogen, [['Yes','true'],['No','false']] %></td>
   </tr>
   <tr>
     <th>Dimmers:</th>
-    <td><%= f.text_field :dimmers, :size => 50 %></td>
+    <td><%= f.select :dimmers, [['Yes','true'],['No','false']] %></td>
   </tr>
   <tr>
     <th>Controls:</th>
-    <td><%= f.text_field :controls, :size => 50 %></td>
+    <td><%= f.select :controls, [['Yes','true'],['No','false']] %></td>
   </tr>
   <tr>
     <th>Blackout:</th>
-    <td><%= f.text_field :blackout, :size => 50 %></td>
+    <td><%= f.select :blackout, [['Yes','true'],['No','false']] %></td>
   </tr>
   <tr>
     <th>Windows:</th>
-    <td><%= f.text_field :windows, :size => 50 %></td>
+    <td><%= f.select :windows, [['Yes','true'],['No','false']] %></td>
   </tr>
   <tr>
     <th>Sound System:</th>
-    <td><%= f.text_field :sound_system, :size => 50 %></td>
+    <td><%= f.select :sound_system, [['Yes','true'],['No','false']] %></td>
   </tr>
   <tr>
     <th>Air Conditioning:</th>
-    <td><%= f.text_field :air_conditioning, :size => 50 %></td>
+    <td><%= f.select :air_conditioning, [['Yes','true'],['No','false']] %></td>
   </tr>
   <tr>
     <th>Phase:</th>
-    <td><%= f.text_field :phase, :size => 50 %></td>
+    <td><%= f.select :phase, [['Yes','true'],['No','false']] %></td>
   </tr>
   <tr>
     <th>Sockets:</th>
-    <td><%= f.text_field :sockets, :size => 50 %></td>
+    <td><%= f.text_field :sockets, :size => 10 %></td>
   </tr>
   <tr>
     <th>Telephone Points:</th>
-    <td><%= f.text_field :telephone_points, :size => 50 %></td>
+    <td><%= f.text_field :telephone_points, :size => 10 %></td>
   </tr>
   <tr>
     <th>&nbsp;</th>

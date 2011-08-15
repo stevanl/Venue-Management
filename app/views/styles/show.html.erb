@@ -1,11 +1,10 @@
-<h1><%= @style.style %></h1>
+<h1><%= link_to @venue.name, venue_path(@venue) %>: <%= @style.style %></h1>
 <p id="notice"><%= notice %></p>
 
 <table>
   <tr>
     <th width="130">Venue Style:</th>
-    <td><%= @venue.style %> <%= link_to '(edit)', edit_venue_style_path(@venue, @style) %></td>
+    <td><%= @style.style %> <%= link_to '(edit)', edit_venue_style_path(@venue, @style) %></td>
+    <td><%= button_to 'Delete', [@venue, @style], :method => :delete, :confirm => "you sure?" %></td>
   </tr>
-  <tr>
-  <td><%= link_to 'Delete', [@venue, @style], :method => :destroy, :confirm => "sure?" %></td></tr>
 </table>
