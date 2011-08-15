@@ -39,11 +39,11 @@
   </tr>
   <tr>
     <th>Delegate rates:</th>
-    <td><%= f.text_field :delegate_rates, :size => 5 %></td>
+    <td>£<%= f.text_field :delegate_rates, :size => 5 %></td>
   </tr>
   <tr>
     <th>Room hire rates:</th>
-    <td><%= f.text_field :room_hire_rates, :size => 5 %></td>
+    <td>£<%= f.text_field :room_hire_rates, :size => 5 %></td>
   </tr>
   <tr>
     <th>Meeting capacity:</th>
@@ -59,7 +59,7 @@
   </tr>
   <tr>
     <th>Disabled Access:</th>
-    <td><%= f.text_field :disabled_access, :size => 5 %></td>
+    <td><%= f.select :disabled_access, [['Yes','true'],['No','false']] %></td>
   </tr>
   <tr>
     <th>&nbsp;</th>

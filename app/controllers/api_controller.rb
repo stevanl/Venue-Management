@@ -1,7 +1,7 @@
 class ApiController < ApplicationController  
 
   def search_venues
-    @venues = Venue.all
+    @venues = Venue.find(:all, :limit => 20)
     
     respond_to do |format|
       format.xml

@@ -3,11 +3,12 @@
 <%= paginate @venues %>
 <table>
 	<tr>
-		<th colspan="5" style="text-align:right"><%= link_to 'Add New Venue', new_venue_path %></th>
+		<th colspan="6" style="text-align:right"><%= link_to 'Add New Venue', new_venue_path %></th>
 	</tr>
 	<tr>
 		<th>Name</th>
-		<th>Postcode</th>
+		<th>Meeting Capacity</th>
+		<th>Room Hire Rates</th>
 		<th>Styles</th>
 		<th>Meeting Rooms</th>
 		<th>Action</th>
@@ -15,20 +16,13 @@
 	<%- for venue in @venues %>
 	<tr>
 		<td><%= link_to venue.name, venue_path(venue) %></td>
-		<td><%= venue.postcode %></td>
+		<td><%= venue.meeting_capacity %></td>
+		<td><%= venue.room_hire_rates %></td>
 		<td>
-		<ul>
-			<%- for style in venue.style -%>
-			<li><%= style.style %></li>
-			<%- end -%>
-		</ul>
+		  <%= link_to venue.style.size, venue_styles_path(venue) %>
 		</td>
 		<td>
-		<ul>
-			<%- for room in venue.meeting_room -%>
-			<li><%= room.room_name %></li>
-			<%- end -%>
-		</ul>
+		  <%= link_to venue.meeting_room.size, venue_meeting_rooms_path(venue) %>
 		</td>
 		<td><%= link_to 'Edit', edit_venue_path(venue) %></td>
 	</tr>

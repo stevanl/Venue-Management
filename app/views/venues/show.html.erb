@@ -59,15 +59,15 @@ function initialize() {
   </tr>
   <tr>
     <th>Website:</th>
-    <td><%= @venue.website %></td>
+    <td><a href="<%= @venue.website %>"><%= @venue.website %></a></td>
   </tr>
   <tr>
     <th>Delegate rates:</th>
-    <td><%= @venue.delegate_rates %></td>
+    <td>£<%= @venue.delegate_rates %></td>
   </tr>
   <tr>
     <th>Room hire rates:</th>
-    <td><%= @venue.room_hire_rates %></td>
+    <td>£<%= @venue.room_hire_rates %></td>
   </tr>
   <tr>
     <th>Meeting capacity:</th>
@@ -83,7 +83,7 @@ function initialize() {
   </tr>
   <tr>
     <th>Disabled Access:</th>
-    <td><%= @venue.disabled_access %></td>
+    <td><%= @venue.disabled_access? ? 'Yes' : 'No' %></td>
   </tr>
   <tr>
     <th>Contacts:</th>
