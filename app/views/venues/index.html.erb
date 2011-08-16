@@ -6,17 +6,19 @@
 		<th colspan="6" style="text-align:right"><%= link_to 'Add New Venue', new_venue_path %></th>
 	</tr>
 	<tr>
-		<th>Name</th>
-		<th>Meeting Capacity</th>
-		<th>Room Hire Rates</th>
+		<th>Venue Name</th>
+		<th>Meeting<br>Capacity</th>
+		<th>Catering<br>Capacity</th>
+		<th>Room Hire<br>Rates</th>
 		<th>Styles</th>
-		<th>Meeting Rooms</th>
+		<th>Meeting<br>Rooms</th>
 		<th>Action</th>
 	</tr>
 	<%- for venue in @venues %>
 	<tr>
 		<td><%= link_to venue.name, venue_path(venue) %></td>
 		<td><%= venue.meeting_capacity %></td>
+		<td><%= venue.catering_capacity %></td>
 		<td><%= venue.room_hire_rates %></td>
 		<td>
 		  <%= link_to venue.style.size, venue_styles_path(venue) %>
@@ -38,10 +40,22 @@
 	<%= f.text_field :name_contains, :size => 25 %><br />
 	<%= f.label :postcode_contains %>
 	<%= f.text_field :postcode_contains, :size => 25 %><br />
-	<%= f.label :room_hire_rates_lt %>
-	<%= f.number_field :room_hire_rates_lt, :size => 25 %><br />
+
+	<%= f.label :catering_capacity_gt %>
+	<%= f.number_field :catering_capacity_gt, :size => 25 %><br />
 	<%= f.label :meeting_capacity_gt %>
 	<%= f.number_field :meeting_capacity_gt, :size => 25 %><br />
+	<%= f.label :room_hire_rates_lt %>
+	<%= f.number_field :room_hire_rates_lt, :size => 25 %><br />
+	
+	
+  <!-- 
+  City
+  Venue Style (hotel, arena etc)
+  Price 
+  -->
+  
+  
 	<%= f.submit "Search" %>
 <% end %>
 </div>
