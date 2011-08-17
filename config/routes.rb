@@ -7,7 +7,8 @@ VenueManagement::Application.routes.draw do
     resources :meeting_rooms
   end
 
-  match 'api/search_venues'
+  match 'api/search_venues(.:format)'
+  match 'api/show_venue(.:format)'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

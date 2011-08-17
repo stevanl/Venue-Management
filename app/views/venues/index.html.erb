@@ -3,13 +3,13 @@
 <%= paginate @venues %>
 <table>
 	<tr>
-		<th colspan="6" style="text-align:right"><%= link_to 'Add New Venue', new_venue_path %></th>
+		<th colspan="7" style="text-align:right"><%= link_to 'Add New Venue', new_venue_path %></th>
 	</tr>
 	<tr>
-		<th>Venue Name</th>
-		<th>Meeting<br>Capacity</th>
-		<th>Catering<br>Capacity</th>
-		<th>Room Hire<br>Rates</th>
+		<th><%= sort_link @search, :name, "Venue Name" %></th>
+		<th><%= sort_link @search, :meeting_capacity, "Meeting Capacity", :default_order => :desc %></th>
+		<th><%= sort_link @search, :catering_capacity, "Catering Capacity", :default_order => :desc %></th>
+		<th><%= sort_link @search, :room_hire_rates, "Room Hire Rates", :default_order => :asc %></th>
 		<th>Styles</th>
 		<th>Meeting<br>Rooms</th>
 		<th>Action</th>
@@ -40,22 +40,18 @@
 	<%= f.text_field :name_contains, :size => 25 %><br />
 	<%= f.label :postcode_contains %>
 	<%= f.text_field :postcode_contains, :size => 25 %><br />
-
+	<%= f.label :city_contains %>
+	<%= f.text_field :city_contains, :size => 25 %><br />
+	<%= f.label :county_contains %>
+	<%= f.text_field :county_contains, :size => 25 %><br />
+	<%= f.label :style_style_contains, 'Style type contains' %>
+	<%= f.text_field :style_style_contains, :size => 25 %><br />
 	<%= f.label :catering_capacity_gt %>
 	<%= f.number_field :catering_capacity_gt, :size => 25 %><br />
 	<%= f.label :meeting_capacity_gt %>
 	<%= f.number_field :meeting_capacity_gt, :size => 25 %><br />
 	<%= f.label :room_hire_rates_lt %>
 	<%= f.number_field :room_hire_rates_lt, :size => 25 %><br />
-	
-	
-  <!-- 
-  City
-  Venue Style (hotel, arena etc)
-  Price 
-  -->
-  
-  
 	<%= f.submit "Search" %>
 <% end %>
 </div>

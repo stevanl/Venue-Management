@@ -1,11 +1,11 @@
 xml.instruct!
-xml.brokers() {
+xml.venues() {
   @venues.each_with_index {|venue,i|
-    xml.broker do
+    xml.venue do
+      xml.id venue.id
       xml.name venue.name
-      xml.address venue.address
-      xml.telephone venue.telephone
-      xml.website venue.website
+      xml.city venue.city
+      xml.county venue.county
       xml.delegate_rates venue.delegate_rates
       xml.room_hire_rates venue.room_hire_rates
       xml.meeting_capacity venue.meeting_capacity

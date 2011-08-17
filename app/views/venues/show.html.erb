@@ -3,7 +3,7 @@
 var map = null;
 var geocoder = null;
 
-function showAddress(address) {
+function showAddress(address, name) {
   if (geocoder) {
     geocoder.getLatLng(
       address,
@@ -14,10 +14,11 @@ function showAddress(address) {
           map.setCenter(point, 13);
           var marker = new GMarker(point);
           map.addOverlay(marker);
+          map.setUIToDefault();
 
           // As this is user-generated content, we display it as
           // text rather than HTML to reduce XSS vulnerabilities.
-          marker.openInfoWindow(document.createTextNode(address));
+          marker.openInfoWindowHtml(name);
         }
       }
     );
@@ -28,7 +29,7 @@ function initialize() {
   if (GBrowserIsCompatible()) {
     map = new GMap2(document.getElementById("map_canvas"));
     geocoder = new GClientGeocoder();
-    showAddress("<%= @venue.address %>")
+    showAddress("<%= @venue.address %>", "<strong><%= @venue.name %></strong><br><%= @venue.address %>")
   }
 }
 
@@ -63,7 +64,7 @@ function initialize() {
   </tr>
   <tr>
     <th>Delegate rates:</th>
-    <td>£<%= @venue.delegate_rates %></td>
+    <td>From £<%= @venue.delegate_rates %></td>
   </tr>
   <tr>
     <th>Room hire rates:</th>
@@ -112,8 +113,8 @@ function initialize() {
         <td><%= room.theatre %></td>
         <td><%= room.lunch_dinner %></td>
         <td><%= room.dinner_dance %></td>
-        <td><%= room.length %></td>
-        <td><%= room.width %></td>
+        <td><%= room.length %>m</td>
+        <td><%= room.width %>m</td>
         <td><%= room.area %>m<sup>2</sup></td>
       </tr>
       <%- end -%>
