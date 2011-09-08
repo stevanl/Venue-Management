@@ -87,6 +87,14 @@ function initialize() {
     <td><%= @venue.disabled_access? ? 'Yes' : 'No' %></td>
   </tr>
   <tr>
+    <th class="commission">Commission:</th>
+    <td class="commission"><%= @venue.commission %></td>
+  </tr>
+  <tr>
+    <th>Notes:</th>
+    <td><%= @venue.notes %></td>
+  </tr>
+  <tr>
     <th><%= link_to "Contacts:", venue_contacts_path(@venue) %></th>
     <td>
        <%- for contact in @venue.contact -%>

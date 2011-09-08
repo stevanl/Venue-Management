@@ -44,8 +44,12 @@
 	<%= f.text_field :city_contains, :size => 25 %><br />
 	<%= f.label :county_contains %>
 	<%= f.text_field :county_contains, :size => 25 %><br />
-	<%= f.label :style_style_contains, 'Style type contains' %>
-	<%= f.text_field :style_style_contains, :size => 25 %><br />
+	<%= f.label :style_style_in, 'Style type' %>
+    <ul style="list-style-type:none;margin-left:0;padding-left:0">
+    <% f.collection_checks :style_style_in, @styles, :style, :style, :class => 'headcheck' do |check| %>
+    	<li><%= check.box %> <%= check.label %></li>
+	<% end %>
+	</ul>
 	<%= f.label :catering_capacity_gt %>
 	<%= f.number_field :catering_capacity_gt, :size => 25 %><br />
 	<%= f.label :meeting_capacity_gt %>

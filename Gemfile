@@ -6,3 +6,4 @@ gem 'jammit'
 gem 'meta_where'
 gem 'meta_search'
 gem 'kaminari'
+gem "rubber", "1.14.1"

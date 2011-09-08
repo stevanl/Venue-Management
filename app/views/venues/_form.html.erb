@@ -19,7 +19,7 @@
   </tr>
   <tr>
     <th>Address:</th>
-    <td><%= f.text_area :address  %></td>
+    <td><%= f.text_area :address, :style => "height:100px"  %></td>
   </tr>
   <tr>
     <th>Postcode:</th>
@@ -60,6 +60,14 @@
   <tr>
     <th>Disabled Access:</th>
     <td><%= f.select :disabled_access, [['Yes','true'],['No','false']] %></td>
+  </tr>
+  <tr>
+    <th>Commission:</th>
+    <td><%= f.text_field :commission, :size => 5 %></td>
+  </tr>
+  <tr>
+    <th>Notes:</th>
+    <td><%= f.text_area :notes, :style => "width:780px;height:100px" %></td>
   </tr>
   <tr>
     <th>&nbsp;</th>

@@ -4,6 +4,7 @@ class VenuesController < ApplicationController
   def index
     @search = Venue.search(params[:search])
     @venues = @search.page(params[:page]).per(20)
+    @styles = Style.select("distinct style").order("style asc")
 
     respond_to do |format|
       format.html # index.html.erb

@@ -1,0 +1,70 @@
+--- 
+- !ruby/object:Rubber::Configuration::InstanceItem 
+  domain: mycurrencytransfer.com
+  image_id: ami-d84675ac
+  image_type: t1.micro
+  instance_id: i-9eacaae8
+  name: production
+  roles: 
+  - !ruby/object:Rubber::Configuration::RoleItem 
+    name: web
+    options: {}
+
+  - !ruby/object:Rubber::Configuration::RoleItem 
+    name: haproxy
+    options: {}
+
+  - !ruby/object:Rubber::Configuration::RoleItem 
+    name: app
+    options: {}
+
+  - !ruby/object:Rubber::Configuration::RoleItem 
+    name: passenger
+    options: {}
+
+  - !ruby/object:Rubber::Configuration::RoleItem 
+    name: apache
+    options: {}
+
+  - !ruby/object:Rubber::Configuration::RoleItem 
+    name: db
+    options: 
+      primary: true
+  - !ruby/object:Rubber::Configuration::RoleItem 
+    name: mysql_master
+    options: {}
+
+  security_groups: 
+  - venues_production_default
+  - venues_production_web
+  - venues_production_production
+  - venues_production_haproxy
+  - venues_production_app
+  - venues_production_passenger
+  - venues_production_apache
+  - venues_production_db
+  - venues_production_mysql_master
+- !ruby/object:Rubber::Configuration::InstanceItem 
+  domain: ec2-46-137-131-213.eu-west-1.compute.amazonaws.com
+  image_id: ami-d84675ac
+  image_type: t1.micro
+  instance_id: i-beadabc8
+  name: web01
+  roles: 
+  - !ruby/object:Rubber::Configuration::RoleItem 
+    name: web
+    options: {}
+
+  - !ruby/object:Rubber::Configuration::RoleItem 
+    name: haproxy
+    options: {}
+
+  security_groups: 
+  - venues_production_default
+  - venues_production_web
+  - venues_production_web01
+  - venues_production_haproxy
+- volumes: {}
+
+  static_ips: {}
+
